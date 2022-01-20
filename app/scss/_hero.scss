@@ -1,0 +1,33 @@
+.hero {
+  min-height: 71vh;
+  background-image: url("../../app/images/mobile/image-header.jpg");
+
+  @include breakpoints-up("sm") {
+    min-height: 85vh;
+    background-image: url("../../app/images/desktop/image-header.jpg");
+  }
+
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    font-family: "Fraunces", serif;
+    color: $white;
+    font-size: 2.5rem;
+    letter-spacing: 0.1875rem;
+    text-transform: uppercase;
+    margin-bottom: 3.125rem;
+
+    @include breakpoints-up("md") {
+      font-size: 4.375rem;
+      letter-spacing: 0.625rem;
+    }
+  }
+}

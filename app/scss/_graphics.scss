@@ -1,0 +1,60 @@
+.graphics {
+  display: grid;
+  grid-template-rows: 50% 50%;
+
+  @include breakpoints-up("md") {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+  }
+
+  &__image1,
+  &__image2 {
+    position: relative;
+    max-height: 43.75rem;
+    min-height: 50vh;
+
+    @include breakpoints-up("lg") {
+      min-height: 40vh;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .text {
+      text-align: center;
+      position: absolute;
+      bottom: 3.75rem;
+      width: calc(100% - 18px * 2);
+      max-width: 20.625rem;
+      left: 50%;
+      transform: translate(-50%);
+
+      h4 {
+        font-family: "Fraunces", serif;
+        font-size: 1.75rem;
+        font-weight: bold;
+      }
+
+      p {
+        line-height: 170%;
+        margin-top: 1.125rem;
+      }
+
+      &-graphic-design {
+        h4,
+        p {
+          color: $dark-desaturated-cyan;
+        }
+      }
+
+      &-photography {
+        h4,
+        p {
+          color: $dark-blue;
+        }
+      }
+    }
+  }
+}

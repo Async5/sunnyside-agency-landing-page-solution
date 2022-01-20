@@ -1,0 +1,61 @@
+footer {
+  background: #90d4c5;
+  padding: 5.3125rem 0rem;
+}
+
+.footer {
+  text-align: center;
+  max-width: 19.0625rem;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .links {
+    margin-top: 1.875rem;
+    &__item {
+      a {
+        color: $footer-green;
+        transition: 200ms all ease;
+
+        &:hover {
+          color: $white;
+        }
+      }
+      &:not(:last-child) {
+        margin-right: 3.4375rem;
+      }
+    }
+  }
+
+  .socials {
+    margin-top: 4.375rem;
+    &__item {
+      cursor: pointer;
+      &:not(:last-child) {
+        margin-right: 1.6875rem;
+      }
+
+      &:hover {
+        svg {
+          path {
+            transition: all 200ms ease;
+            fill: $white;
+          }
+        }
+      }
+    }
+  }
+
+  h5 {
+    svg {
+      transform: scale(1.3);
+    }
+  }
+}
